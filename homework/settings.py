@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l(adp--q!h32&h70ydz!wo7jt%&mmw5cvf*ql#o#ezvvku+rw-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS=['*']
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'homework.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '7669',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
